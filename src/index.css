@@ -1,11 +1,12 @@
 @import "tailwindcss";
 
-/* ===== THEME CONFIG ===== */
-@custom-variant dark (&:where(.dark, .dark *));
 /* ===== GOOGLE FONTS ===== */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@400;500;600;700;800;900&display=swap');
 
 /* ===== THEME CONFIG ===== */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* ===== TAILWIND THEME OVERRIDES ===== */
 @theme {
   --color-purple-50: #faf5ff;
   --color-purple-100: #f3e8ff;
