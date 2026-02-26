@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+/* ===== THEME CONFIG ===== */
+@custom-variant dark (&:where(.dark, .dark *));
 /* ===== GOOGLE FONTS ===== */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@400;500;600;700;800;900&display=swap');
 
@@ -20,8 +22,15 @@
 }
 
 /* ===== BASE STYLES ===== */
-* { cursor: none !important; }
-@media (pointer: coarse) { * { cursor: auto !important; } }
+* {
+  cursor: none !important;
+}
+
+@media (pointer: coarse) {
+  * {
+    cursor: auto !important;
+  }
+}
 
 body {
   font-family: var(--font-sans);
@@ -88,6 +97,7 @@ body {
 }
 
 @media (pointer: coarse) {
+
   #custom-cursor,
   #custom-cursor-ring {
     display: none !important;
@@ -169,7 +179,9 @@ body {
 }
 
 @keyframes skeleton-wave {
-  100% { transform: translateX(100%); }
+  100% {
+    transform: translateX(100%);
+  }
 }
 
 /* ===== BACK TO TOP ===== */
@@ -201,16 +213,24 @@ body {
 }
 
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 /* ===== CHAT PULSE ===== */
 @keyframes pulse-chat {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: scale(1);
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
   }
+
   50% {
     transform: scale(1.05);
     box-shadow: 0 10px 25px rgba(156, 39, 176, 0.4);
